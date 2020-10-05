@@ -46,7 +46,8 @@ class Directory extends Component {
                                 title={section.title} 
                                 key={section.id} 
                                 image={section.imageUrl}
-                                siz={section.size}/>
+                                siz={section.size}
+                                linku={section.linkUrl}/>
              })
 
         return(
