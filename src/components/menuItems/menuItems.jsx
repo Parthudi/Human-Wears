@@ -1,6 +1,6 @@
 import React from 'react'
 import {withRouter} from 'react-router-dom'
-import './menu-items.styles.css'
+import './menuItems.css'
 
 const MenuItems = (props) => {
     return(

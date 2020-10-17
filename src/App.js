@@ -1,19 +1,46 @@
 import React, { Component } from 'react';
 import HomePage from './pages/Homepage/homepage.component'
 import ShopPage from './pages/Shop/shop'
-import {Route} from 'react-router-dom'
-//import imag from './images/shopping.jpg'
+import {Route, Switch} from 'react-router-dom'
+import HeaderCompo from './components/header/header'
+import SignIn from './components/sign-in/signin'
+import { auth } from './firebase.utility/firebase.utility'
 import './App.css'
 
 
 class App extends Component {
+
+  state = {
+    CurrentUser: null 
+    }
+
+    unSubscribeFromAuth = null
+
+    componentDidMount() {
+      this.unSubscribeFromAuth = auth.onAuthStateChanged((user) => {
+        this.setState({ CurrentUser: user })
+
+        console.log(user)
+      })
+    }
+
+    componentWillUnmount() {
+      this.unSubscribeFromAuth()
+    }
   render() {
     return (
-      <div className='App' /* style={{backgroundImage:  `url(${imag})`, backgroundSize: '100%', backgroundRepeat: 'repeat-y'}} */>
+       
+      <div className='App' >
+            <HeaderCompo currentSignOut={this.state.CurrentUser}/>
+
+         <Switch>
             <Route path='/' exact component={HomePage}/>
 
             <Route path='/shop' exact component={ShopPage}/>
 
+            <Route path='/signin' component={SignIn} />
+            
+      
             <Route path='/shop/hats' render={(props) => {
               console.log(props)
               return <h1> show hats </h1>
@@ -34,9 +61,10 @@ class App extends Component {
               console.log(props)
               return <h1> show mens </h1>
                }}/>
-           
-          
+          </Switch> 
+         
       </div>
+
     );
   }
 }
