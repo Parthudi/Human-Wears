@@ -22,8 +22,9 @@
     }
 
     .form-input:focus~.form-input-label {
-        top: -14px;
-        font-size: 12px;
+        top: -15px;
+        font-size: 13px;
+        left: -2px;
         color: black;
     }
 

@@ -13,6 +13,10 @@ const HeaderCompo = (props) => {
                 <ReactLogo className='logo' />
             </Link>
             
+            <div className='tit'>
+                    <h1> HUMANS WEAR </h1>
+            </div>
+
             <div className='options'>
                 <Link className='option'  to='/shop'>
                         SHOP
@@ -26,7 +30,7 @@ const HeaderCompo = (props) => {
                             SIGN OUT
                         </div>
                   )   :   (
-                <Link className='option' to='/SignIn'>
+                <Link className='option' to='/login'>
                     SIGN IN
                 </Link>
                     )

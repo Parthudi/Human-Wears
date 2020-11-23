@@ -13,18 +13,19 @@
     font-weight: bolder;
     border: none;
     cursor: pointer;
-  
+    
   }
   .custom-button:hover {
-      background-color: rgb(211, 109, 202);
+      background-color: rgb(122, 119, 69);
       color: black;
       border: 1px solid black;
     }
   
-  .googleButton {
+    .custom-button.googleButton {
     background-color: cornflowerblue;
   }
 
   .googleButton:hover {
-    background-color: darkkhaki;
+    background-color: rgb(122, 119, 69);
+    border: 1px solid black;
   }

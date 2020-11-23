@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import MenuItems from '../menuItems/menuItems'
+import Men from '../../images/parthudi.jpg'
+import Hat from '../../images/myfinalhat.jpg'
+import Sneaker from '../../images/myfinalsneaker.jpg'
 import './directory.css'
 
 class Directory extends Component {
@@ -7,7 +10,8 @@ class Directory extends Component {
          sections : [
                 {
                   title: 'hats',
-                  imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+                  imageUrl: Hat ,
+                //  imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
                   id: 1,
                   linkUrl: 'shop/hats'
                 },
@@ -19,7 +23,8 @@ class Directory extends Component {
                 },
                 {
                   title: 'sneakers',
-                  imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+                  imageUrl: Sneaker ,
+                 // imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
                   id: 3,
                   linkUrl: 'shop/sneakers'
                 },
@@ -32,7 +37,8 @@ class Directory extends Component {
                 },
                 {
                   title: 'mens',
-                  imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+                  imageUrl: Men ,
+                 // imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
                   size: 'large',
                   id: 5,
                   linkUrl: 'shop/mens'

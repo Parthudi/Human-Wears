@@ -2,9 +2,14 @@
     width: 30vw;
     display: flex;
     flex-direction: column;
+    
     }
-
+    
 .Buttons {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5px;
 }
+
+

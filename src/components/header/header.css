@@ -7,21 +7,35 @@
 }
     .logo-container {
       height: 100%;
+      margin-top: -12px;
       width: 70px;
       padding: 25px;
     }
-  
+    .logo-container:hover {
+        transform: scale(1.1);
+    }
+
     .options {
-      width: 50%;
+      width: 30%;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: flex-end;
     }
       .option {
+        font-size: 18px;
         padding: 10px 15px;
         cursor: pointer;
       }
-    
-  
-  
+    .option:hover{
+      transform: scale(1.1);
+      color: rgb(228, 199, 125);
+    }
+
+.tit {
+    text-align: center;
+    margin-left: 245px;
+    font-size: 21px;
+    font-family: 'Henny Penny', cursive;
+    color: rgb(87, 48, 68);
+}
